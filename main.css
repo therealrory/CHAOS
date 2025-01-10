@@ -1,5 +1,6 @@
 /* Hmmm */
 
-body {
+html {
+    height: 100%;
     cursor: url('pictures/glove.png'), auto;
 }
