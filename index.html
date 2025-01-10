@@ -8,37 +8,39 @@
 
     <style>
         #grave {
-            height: 20px;
-            width: 20px;
+            height: 10px;
+            width: 10px;
             position: absolute;
-            top: 97%;
-            margin: 0%;
+            left:0;
+            bottom:0;
         }
 
-        #trrgit:link {
+        .nav {
+            margin-left: 20px;
+        }
+
+        .nav:link {
             color: rgb(255, 255, 255);
         }
-        #trrgit:visited {
+        .nav:visited {
             color: rgb(255, 255, 255);
         }
-        #trrgit:hover {
+        .nav:hover {
             color: hotpink;
         }
-        #trrgit:active {
+        .nav:active {
             color: rgb(255, 255, 255);
         }
 
-        #carlagrave:link {
-            text-decoration: none;
-            font-size: 2px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <a href="https://github.com/therealrory" id="trrgit" target="_blank">therealrory on github</a>
+        <a href="https://github.com/therealrory" class="nav" target="_blank">therealrory on github</a>
+        <a href="Pages/videos.html" class="nav" target="_blank">videos</a>
     </header>
     <br>
+    
     <center>
     
     <h1>Day: 2</h1><br>
@@ -46,15 +48,14 @@
     
     <div id="changelogdiv">
         <h3>CHANGELOG: </h3>
+        <p>10.01.2025 (22:24): Added Video page!</p>
         <p>10.01.2025 (14:33): Added a cursor and fixed the path</p>
         <p>09.01.2025 (23:21): Created a secret page, the path is glitched tho. ill just fix it tomorrow when i get on my PC</p>
         <p>09.01.2025 (21:00~): Created the site and base</p>
     </div>
     </center>
 
-    <div id="grave">
-        <a href="grave.html" id="carlagrave">🌹</a>
-    </div>
+    <a id="grave" href="Pages/grave.html" target="_blank"></a>
 
     <script>
         console.log("Sneaking around, arent ya?")
