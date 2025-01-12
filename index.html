@@ -11,43 +11,72 @@
             height: 10px;
             width: 10px;
             position: absolute;
-            left:0;
-            bottom:0;
+            left: 0;
+            bottom: 0;
         }
 
-        .nav {
-            margin-left: 20px;
+        #pfp {
+            width: 30px;
+            height: 30px;
+            margin-right: 1px;
         }
 
-        .nav:link {
-            color: rgb(255, 255, 255);
-        }
-        .nav:visited {
-            color: rgb(255, 255, 255);
-        }
-        .nav:hover {
-            color: hotpink;
-        }
-        .nav:active {
-            color: rgb(255, 255, 255);
+        header {
+            display: flex;
+            align-items: center;
+            width: 1000px; /* Or whatever width you prefer */
         }
 
+        header > div {
+            display: flex;
+            align-items: center;
+        }
+
+        header .nav {
+            margin-left: 10px; /* Space the anchor elements */
+        }
+
+        /* Add this style to handle the "div as a link" functionality */
+        header a {
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        /* If you want to adjust the look of the "entire div" link */
+        .clickable-div {
+            display: flex;
+            align-items: center;
+        }
+
+        .clickable-div img {
+            margin-right: 5px;
+        }
+
+        .clickable-div span {
+            bottom: 50px; /* Ensure it is positioned as expected */
+        }
     </style>
 </head>
 <body>
     <header>
-        <a href="https://github.com/therealrory" class="nav" target="_blank">therealrory on github</a>
-        <a href="Pages/videos.html" class="nav" target="_blank">videos</a>
+        <!-- The entire div is now inside the link to make it clickable -->
+        <a href="https://github.com/therealrory" target="_blank">
+            <div class="clickable-div">
+                <img src="pictures/lamb.png" alt="pfp" id="pfp">
+                <span>therealrory on github</span>
+            </div>
+        </a>
+        <a href="Pages/videos.html" class="nav">videos</a>
+        <a href="Pages/music.html" class="nav">fav music</a>
     </header>
     <br>
     
     <center>
-    
-    <h1>Day: 3</h1><br>
+    <h1>Day: 4</h1><br>
     <p>Hello, World! I am just gonna add stuff to this daily, yippee!!!</p><br><br>
     
     <div id="changelogdiv">
         <h3>CHANGELOG: </h3>
+        <p>12.01.2025 (22:37): Added my favorite music page and my pfp next to github link</p>
         <p>11.01.2025 (13:41): --</p>
         <p>10.01.2025 (22:24): Added Video page!</p>
         <p>10.01.2025 (14:33): Added a cursor and fixed the path</p>
@@ -55,8 +84,6 @@
         <p>09.01.2025 (21:00~): Created the site and base</p>
     </div>
     </center>
-
-    <a id="grave" href="Pages/grave.html" target="_blank"></a>
 
     <script>
         console.log("Sneaking around, arent ya?")

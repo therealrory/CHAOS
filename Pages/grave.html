@@ -15,18 +15,34 @@
             background-repeat: repeat;
         }
 
+        .bbackground {
+            background-color: black; 
+            color:white;
+            width:fit-content;
+        }
     </style>
 </head>
 <body>
     <center>
     <br><br>
-    <h1 style="background-color: black; width:fit-content;">RIP Carla</h1>
-    <p style="background-color: black; width:fit-content;">Dont got much to say, so i'll just show some of her work</p>
+    <h1 class="bbackground">RIP Carla</h1>
+    <p class="bbackground">Dont got much to say, so i'll just show some of her stuff</p>
     </center>
 
-    <div style="margin-left: 50px; width:fit-content;">
-    <img src="../pictures/Carla Art/cassidy.png" alt="Carla's work" style="width: 300px; height: auto;">
-    <p style="margin-left: 34%; background-color: black; width:fit-content;">Cassidy (OC)</p>
-    </div>
-</body>
+    <div style="display: flex; align-items: flex-start; margin-left: 50px;">
+        <div style="width: fit-content;">
+            <img src="../pictures/Carla Art/cassidy.png" alt="Carla's work" style="width: 300px; height: auto;">
+            <p class="bbackground" style="margin-left:32%;">Cassidy (OC)</p>
+        </div>
+        <div>
+            <iframe style="margin-left: 20px; border-radius:12px;" 
+                src="https://open.spotify.com/embed/playlist/42UysZrSs4JsiH3NwgAqJ0?utm_source=generator" 
+                width="400px" height="352" frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+            <p class="bbackground" style="margin-left:25%;">One of Carla's Spotify Playlists</p>
+        </div>
+    </div>    
+       
+    </body>
 </html>
