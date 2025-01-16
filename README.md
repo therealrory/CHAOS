@@ -1,2 +1,2 @@
 # CHAOS
-CHAOS CONTROL
+Gonna update this everyday lololol
