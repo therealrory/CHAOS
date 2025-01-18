@@ -52,6 +52,13 @@
         .clickable-div span {
             bottom: 50px;
         }
+
+        #clicker {
+            position:absolute;
+            top:25%;
+            left:10%;
+            color:black;
+        }
     </style>
 </head>
 <body>
@@ -64,29 +71,141 @@
         </a>
         <a href="Pages/videos.html" class="nav">videos</a>
         <a href="Pages/music.html" class="nav">fav music</a>
-        <a href="https://github.com/therealrory/Rorys-Useless-Scandium-Browser" class="nav" target="_blank">Scandium Browser Project</a>
     </header>
     <br>
     
+    <div id="clicker">
+        <center>
+        <div style="background-color:white; border-radius: 100%; margin-bottom:10px; text-align:center; width:100px; height:100px; line-height: 100px;">
+            <p id="counterparagraph">Start Clicking!</p>
+        </div>
+        <button onclick="counter()">Click</button><br>
+        <!-- <button onclick="saveincookie()">Save</button> -->
+        <!-- <button onclick="loadincookies()">Load</button> -->
+        <!-- <button onclick="deleteAllCookies()">Delete Save</button> -->
+        <p style="color: white;">Shop: </p>
+        <button onclick="startTwoAutoclicker()">2 Seconds Auto-clicker (50C)</button><br>
+        <button onclick="startOneAutoclicker()">1 Second Auto-clicker (200C)</button><br>
+        </center>
+    </div>
+
     <center>
-    <h1>Day: 6</h1><br>
-    <p>Hello, World! I am just gonna add stuff to this as often as possible, yippee!!!</p><br><br>
+    <br><br><br><br><br><br>
+    <p>hi, ill just add stuff here occasionally</p><br><br>
     
     <div id="changelogdiv">
         <h3>CHANGELOG: </h3>
-        <p>16.01.2025 (16.01.2025): Apparently i forgot to commit Day 5? Whoopsies, anyways here it is</p>
+        <p>18.01.2025 (15:41): Added a clicker game (Cookie support will come out some day...)</p>
+        <p>18.01.2025 (14:40): Removed Scandium Browser link because i abandon it</p>
+        <p>16.01.2025 (???): Apparently i forgot to commit Day 5? Whoopsies, anyways here it is</p>
         <p>15.01.2025 (15:36): Added a link to Scandium Browser</p>
         <p>12.01.2025 (22:37): Added my favorite music page and my pfp next to github link</p>
         <p>11.01.2025 (13:41): --</p>
         <p>10.01.2025 (22:24): Added Video page!</p>
         <p>10.01.2025 (14:33): Added a cursor and fixed the path</p>
         <p>09.01.2025 (23:21): Created a secret page, the path is glitched tho. ill just fix it tomorrow when i get on my PC</p>
-        <p>09.01.2025 (21:00~): Created the site and base</p>
+        <p>09.01.2025 (???): Created the site and base</p>
     </div>
     </center>
 
     <script>
         console.log("Sneaking around, arent ya?")
+        let count = 0;
+        let acinterval = 2;
+        let tac = 0;
+        let oac = 0;
+
+        function counter() {
+            count++;
+            console.log(count);
+            document.getElementById('counterparagraph').innerHTML = count + "C";
+        }
+
+        function startTwoAutoclicker() {
+            if (count >= 50) {
+                acinterval = setInterval(counter, 2000);
+                count -= 50;
+                document.getElementById('counterparagraph').innerHTML = count + "C";
+                tac++;
+                console.log("Two Second Auto-clicker started!");
+            } else {
+                console.log("Need to reach 50 first.");
+            }
+        }
+
+        function startOneAutoclicker() {
+            if (count >= 200) {
+                acinterval = setInterval(counter, 1000);
+                count -= 200;
+                document.getElementById('counterparagraph').innerHTML = count + "C";
+                oac++;
+                console.log("One Second Auto-clicker started!");
+            } else {
+                console.log("Need to reach 200 first.");
+            }
+        }
+
+        /*
+        function saveincookie() {
+            document.cookie = "count=" + count;
+            document.cookie = "tac=" + tac;
+            document.cookie = "oac=" + oac;
+            console.log("Saved!");
+        }
+
+        function loadincookies() {
+            count = getCookie("count");
+            document.getElementById('counterparagraph').innerHTML = count + "C";
+
+            for(i = 0; i < getCookie("tac"); i++) {
+                count += 50;
+                startTwoAutoclicker();
+            }
+
+            for(i = 0; i < getCookie("oac"); i++) {
+                count += 200;
+                startOneAutoclicker();
+            }
+
+            console.log("Loaded!");
+        }
+
+        function getCookie(name) {
+            let cookieArr = document.cookie.split("; ");  // Split all cookies by semicolon and space
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split("=");  // Split cookie by '=' to separate name and value
+                if (cookiePair[0] === name) {
+                    return cookiePair[1];  // Return the value of the cookie if the name matches
+                }
+            }
+            return null;  // Return null if cookie is not found
+
+            // Mhh... Cookies, i should probably comment all of this tho, because i dont understand it
+        }
+
+        function deleteCookie(name) {
+            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            console.log(name + " cookie has been deleted.");
+        }
+
+        function deleteAllCookies() {
+            let cookies = document.cookie.split("; "); // Get all cookies as a string array
+            
+            // Loop through all cookies and delete them
+            for (let i = 0; i < cookies.length; i++) {
+                let cookieName = cookies[i].split("=")[0]; // Extract cookie name
+                deleteCookie(cookieName); // Delete each cookie
+            }
+            
+            clearInterval(acinterval);
+            count = 0;
+            document.getElementById('counterparagraph').innerHTML = count + "C";
+            console.log("All cookies have been deleted.");
+        }
+
+        */
+
+        // Gonna fix this later
     </script>
 </body>
 </html>
